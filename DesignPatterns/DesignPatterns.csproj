@@ -42,9 +42,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="01_Strategy\Behavior\FlyNoWay.cs" />
+    <Compile Include="01_Strategy\Behavior\FlyWithRockets.cs" />
+    <Compile Include="01_Strategy\Behavior\FlyWithWings.cs" />
+    <Compile Include="01_Strategy\Behavior\QuackNormal.cs" />
+    <Compile Include="01_Strategy\Behavior\QuackSilenced.cs" />
+    <Compile Include="01_Strategy\Ducks\DecoyDuck.cs" />
     <Compile Include="01_Strategy\Duck.cs" />
-    <Compile Include="01_Strategy\MallardDuck.cs" />
-    <Compile Include="01_Strategy\RedheadDuck.cs" />
+    <Compile Include="01_Strategy\Behavior\IFlyBehavior.cs" />
+    <Compile Include="01_Strategy\Behavior\IQuackBehavior.cs" />
+    <Compile Include="01_Strategy\Ducks\MallardDuck.cs" />
+    <Compile Include="01_Strategy\Ducks\ModelDuck.cs" />
+    <Compile Include="01_Strategy\Ducks\RedheadDuck.cs" />
+    <Compile Include="01_Strategy\Ducks\RubberDuck.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -3,14 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DesignPatterns._01_Strategy.Behavior;
 
 namespace DesignPatterns._01_Strategy
 {
     public abstract class Duck
     {
-        public void Quack()
+        public IFlyBehavior FlyBehavior { get; set; }
+        public IQuackBehavior QuackBehavior { get; set; }
+        
+
+        public void PerformQuack()
         {
-            Console.WriteLine("Generic quack behavior");
+            QuackBehavior.Quack();
         }
 
         public void Swim()
@@ -18,13 +23,17 @@ namespace DesignPatterns._01_Strategy
             Console.WriteLine("Generic swimming behavior..");
         }
 
-        public void Fly()
+        public void PerformFly()
         {
-            Console.WriteLine("Generic flying ability");
+            FlyBehavior.Fly();
+        }
+
+        public void PerformLand()
+        {
+            FlyBehavior.Land();
         }
 
         public abstract void Display();
-
 
     }
 }
