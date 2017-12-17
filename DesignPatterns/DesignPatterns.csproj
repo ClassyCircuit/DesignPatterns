@@ -43,6 +43,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="01_Strategy\Duck.cs" />
+    <Compile Include="01_Strategy\MallardDuck.cs" />
+    <Compile Include="01_Strategy\RedheadDuck.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
