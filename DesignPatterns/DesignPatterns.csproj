@@ -50,17 +50,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="02-Observer\" />
-    <Folder Include="03-Decorator\" />
-    <Folder Include="04-Factory\" />
-    <Folder Include="05-Singleton\" />
-    <Folder Include="06-Command\" />
-    <Folder Include="07-Adapter-Facade\" />
-    <Folder Include="08-TemplateMethod\" />
-    <Folder Include="09-Iterator-Composite\" />
-    <Folder Include="10-State\" />
-    <Folder Include="11-Proxy\" />
-    <Folder Include="12-Compound\" />
+    <Folder Include="02_Observer\" />
+    <Folder Include="03_Decorator\" />
+    <Folder Include="04_Factory\" />
+    <Folder Include="05_Singleton\" />
+    <Folder Include="06_Command\" />
+    <Folder Include="07_Adapter-Facade\" />
+    <Folder Include="08_TemplateMethod\" />
+    <Folder Include="09_Iterator-Composite\" />
+    <Folder Include="10_State\" />
+    <Folder Include="11_Proxy\" />
+    <Folder Include="12_Compound\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
