@@ -1,5 +1,4 @@
-﻿using System;
-using DesignPatterns._01_Strategy.Behavior;
+﻿using DesignPatterns._01_Strategy.Behavior;
 using DesignPatterns._01_Strategy.Ducks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
