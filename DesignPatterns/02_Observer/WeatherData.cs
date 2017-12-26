@@ -12,8 +12,14 @@ namespace DesignPatterns._02_Observer
         private float _temp;
         private float _humidity;
         private float _pressure;
-        private ICollection<IObserver> _activeObservers = new List<IObserver>();
+        private ICollection<IObserver> _activeObservers;
+        private WeatherDataObject _dataObject;
 
+        public WeatherData()
+        {
+            this._dataObject = new WeatherDataObject();
+            this._activeObservers = new List<IObserver>();
+        }
         public void RegisterObserver(IObserver observer)
         {
             this._activeObservers.Add(observer);
@@ -24,35 +30,26 @@ namespace DesignPatterns._02_Observer
             this._activeObservers.Remove(observer);
         }
 
+
         public void NotifyObservers()
         {
             foreach (var observer in _activeObservers)
             {
-                observer.Update(_humidity, _temp, _pressure);
+                observer.Update(this, _dataObject);
             }
         }
 
         public void MeasurementsChanged()
         {
-            this._humidity = GetHumidity();
-            this._pressure = GetPressure();
-            this._temp = GetTemp();
             NotifyObservers();
         }
 
-        public float GetTemp()
+        public void SetMeasurements(float temp, float pressure, float humidity)
         {
-            return 5.00f;
-        }
-
-        public float GetPressure()
-        {
-            return 4.00f;
-        }
-
-        public float GetHumidity()
-        {
-            return 3.00f;
+            this._dataObject.pressure = pressure;
+            this._dataObject.humidity = humidity;
+            this._dataObject.temp = temp;
+            MeasurementsChanged();
         }
     }
 }

@@ -10,29 +10,43 @@ namespace DesignPatterns._02_Observer
     public class ForecastDisplay : IObserver, IDisplayElement
     {
 
-        private float _pressure;
         private float _lastPressure = 0.00f;
-        public void Update(float humidity, float temp, float pressure)
+        private IWeatherData weatherData;
+        private WeatherDataObject _dataObject;
+        public ForecastDisplay(IWeatherData wd)
         {
-            this._lastPressure = _pressure;
-            this._pressure = pressure;
+            this.weatherData = wd;
+            weatherData.RegisterObserver(this);
+
+            this._dataObject = new WeatherDataObject();
+        }
+
+        public void Update(IWeatherData observable, WeatherDataObject obj)
+        {
+            if (observable is WeatherData && obj != null)
+            {
+                this._lastPressure = _dataObject.pressure;
+                this._dataObject = obj;
+            }
             Display();
         }
 
         public void Display()
         {
             Debug.WriteLine("==Forecast==");
-            if (_pressure > _lastPressure)
+            if (_dataObject.pressure > _lastPressure)
             {
-            Debug.WriteLine("Weather is going to improve!");
-            }else if (_pressure == _lastPressure)
+                Debug.WriteLine("Weather is going to improve!");
+            }
+            else if (_dataObject.pressure == _lastPressure)
             {
                 Debug.WriteLine("Same weather ahead!");
-            }else if (_pressure < _lastPressure)
+            }
+            else if (_dataObject.pressure < _lastPressure)
             {
                 Debug.WriteLine("Weather is going to get worse!");
             }
-          
+
         }
     }
 }

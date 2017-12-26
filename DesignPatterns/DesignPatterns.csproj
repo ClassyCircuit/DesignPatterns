@@ -57,11 +57,13 @@
     <Compile Include="01_Strategy\Ducks\ModelDuck.cs" />
     <Compile Include="01_Strategy\Ducks\RedheadDuck.cs" />
     <Compile Include="01_Strategy\Ducks\RubberDuck.cs" />
+    <Compile Include="02_Observer\HeatIndexDisplay.cs" />
     <Compile Include="02_Observer\IDisplayElement.cs" />
     <Compile Include="02_Observer\CurrentConditionsDisplay.cs" />
     <Compile Include="02_Observer\ForecastDisplay.cs" />
     <Compile Include="02_Observer\IObserver.cs" />
     <Compile Include="02_Observer\IWeatherData.cs" />
+    <Compile Include="02_Observer\WeatherDataObject.cs" />
     <Compile Include="02_Observer\StatisticsDisplay.cs" />
     <Compile Include="02_Observer\WeatherData.cs" />
     <Compile Include="Program.cs" />

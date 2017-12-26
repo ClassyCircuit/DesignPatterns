@@ -13,21 +13,35 @@ namespace DesignPatterns._02_Observer
         private float _maxTemp = 0;
         private float _minTemp = 0;
         private int _numberOfReadings = 0;
+        private IWeatherData weatherData;
+        private WeatherDataObject _dataObject;
 
-        public void Update(float humidity, float temp, float pressure)
+        public StatisticsDisplay(IWeatherData wd)
         {
-            this._numberOfReadings++;
-            if (temp > _maxTemp)
-            {
-                this._maxTemp = temp;
-            }
+            this.weatherData = wd;
+            weatherData.RegisterObserver(this);
 
-            if (temp < _minTemp)
-            {
-                this._minTemp = temp;
-            }
+            this._dataObject = new WeatherDataObject();
 
-            this._averageTemp = (_minTemp + _maxTemp) / _numberOfReadings;
+        }
+
+        public void Update(IWeatherData observable, WeatherDataObject obj)
+        {
+            if (observable is WeatherData && obj != null)
+            {
+                this._numberOfReadings++;
+                if (obj.temp > _maxTemp)
+                {
+                    this._maxTemp = obj.temp;
+                }
+
+                if (obj.temp < _minTemp)
+                {
+                    this._minTemp = obj.temp;
+                }
+
+                this._averageTemp = (_minTemp + _maxTemp) / _numberOfReadings;
+            }
 
             Display();
         }

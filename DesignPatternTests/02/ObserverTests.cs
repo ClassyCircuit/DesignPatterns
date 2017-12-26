@@ -14,16 +14,14 @@ namespace DesignPatternTests._02
         [TestMethod]
         public void UpdateObservers()
         {
-            IObserver fd = new ForecastDisplay();
-            IObserver sd = new StatisticsDisplay();
-            IObserver ccd = new CurrentConditionsDisplay();
-
             WeatherData wd = new WeatherData();
-            wd.RegisterObserver(fd);
-            wd.RegisterObserver(sd);
-            wd.RegisterObserver(ccd);
 
-            wd.MeasurementsChanged();
+            IObserver fd = new ForecastDisplay(wd);
+            IObserver sd = new StatisticsDisplay(wd);
+            IObserver ccd = new CurrentConditionsDisplay(wd);
+            IObserver hi = new HeatIndexDisplay(wd);
+
+            wd.SetMeasurements(5.5f, 200f, 0.05f);
 
         }
     }

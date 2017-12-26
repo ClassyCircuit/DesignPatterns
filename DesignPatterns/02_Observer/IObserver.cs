@@ -8,6 +8,6 @@ namespace DesignPatterns._02_Observer
 {
     public interface IObserver
     {
-        void Update(float humidity, float temp, float pressure);
+        void Update(IWeatherData observable, WeatherDataObject obj);
     }
 }
