@@ -66,6 +66,11 @@
     <Compile Include="02_Observer\WeatherDataObject.cs" />
     <Compile Include="02_Observer\StatisticsDisplay.cs" />
     <Compile Include="02_Observer\WeatherData.cs" />
+    <Compile Include="03_Decorator\CoffeeShop\IBeverage.cs" />
+    <Compile Include="03_Decorator\CoffeeShop\DarkRoast.cs" />
+    <Compile Include="03_Decorator\CoffeeShop\HouseBlend.cs" />
+    <Compile Include="03_Decorator\CoffeeShop\Mocha.cs" />
+    <Compile Include="03_Decorator\CoffeeShop\Whip.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -73,7 +78,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="03_Decorator\" />
     <Folder Include="04_Factory\" />
     <Folder Include="05_Singleton\" />
     <Folder Include="06_Command\" />
