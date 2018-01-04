@@ -10,12 +10,16 @@ namespace DesignPatterns._03_Decorator.CoffeeShop
     {
         public string Description { get; }
         public decimal Cost { get;  }
+        public Enum Size { get; set; }
 
-        public HouseBlend()
+        public HouseBlend(Enum size)
         {
-            Description = "Excellent House Blend";
+            Description = Size + " Excellent House Blend";
             Cost = 2.55m;
+            Size = size;
         }
-
+        
     }
+
+    
 }

@@ -6,18 +6,17 @@ using System.Threading.Tasks;
 
 namespace DesignPatterns._03_Decorator.CoffeeShop
 {
-    public class DarkRoast : IBeverage
+    public class Decaf : IBeverage
     {
         public string Description { get; }
         public decimal Cost { get; }
         public Enum Size { get; set; }
 
-        public DarkRoast(Enum size)
+        public Decaf(Enum size)
         {
-            Description = Size + " Dark Roast";
-            Cost = 1.60m;
+            Description = Size + " Decaf";
+            Cost = 1.99m;
             Size = size;
         }
-
     }
 }

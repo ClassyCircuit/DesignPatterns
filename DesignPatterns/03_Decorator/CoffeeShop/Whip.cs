@@ -6,19 +6,38 @@ using System.Threading.Tasks;
 
 namespace DesignPatterns._03_Decorator.CoffeeShop
 {
-    public class Whip : IBeverage
+    public class Whip : CondimentDecorator
     {
-        public string Description { get; }
+        public override string Description => DecoratedBeverage.Description + ", Whip";
         private decimal _cost { get; set; }
-        private IBeverage DecoratedBeverage { get; set; }
-        public decimal Cost => _cost + DecoratedBeverage.Cost;
 
+        public override decimal Cost
+        {
+            get
+            {
+                _cost = DecoratedBeverage.Cost;
+                if (DecoratedBeverage.Size is (BeverageSize.Large))
+                {
+                    _cost += 0.7m;
+                }
+                else if (DecoratedBeverage.Size is (BeverageSize.Medium))
+                {
+                    _cost += 0.5m;
+                }
+                else if (DecoratedBeverage.Size is (BeverageSize.Small))
+                {
+                    _cost += 0.2m;
+                }
+
+                return _cost;
+
+            }
+            
+        }
+        
         public Whip(IBeverage beverage)
         {
-            Description = "Whip condiment";
-            _cost = 0.45m;
-            DecoratedBeverage = beverage;
-
+            DecoratedBeverage = beverage;    
         }
     }
 }

@@ -66,10 +66,16 @@
     <Compile Include="02_Observer\WeatherDataObject.cs" />
     <Compile Include="02_Observer\StatisticsDisplay.cs" />
     <Compile Include="02_Observer\WeatherData.cs" />
+    <Compile Include="03_Decorator\CoffeeShop\BeverageSizeEnum.cs" />
+    <Compile Include="03_Decorator\CoffeeShop\CondimentDecorator.cs" />
+    <Compile Include="03_Decorator\CoffeeShop\Decaf.cs" />
+    <Compile Include="03_Decorator\CoffeeShop\Espresso.cs" />
     <Compile Include="03_Decorator\CoffeeShop\IBeverage.cs" />
     <Compile Include="03_Decorator\CoffeeShop\DarkRoast.cs" />
     <Compile Include="03_Decorator\CoffeeShop\HouseBlend.cs" />
     <Compile Include="03_Decorator\CoffeeShop\Mocha.cs" />
+    <Compile Include="03_Decorator\CoffeeShop\Soy.cs" />
+    <Compile Include="03_Decorator\CoffeeShop\SteamedMilk.cs" />
     <Compile Include="03_Decorator\CoffeeShop\Whip.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

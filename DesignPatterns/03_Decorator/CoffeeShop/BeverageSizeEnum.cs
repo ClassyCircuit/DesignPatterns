@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace DesignPatterns._03_Decorator.CoffeeShop
 {
-    public interface IBeverage
+    public enum BeverageSize
     {
-        string Description { get; }
-        decimal Cost { get; }
-        Enum Size { get; set; }
-    }
+        Small,
+        Medium,
+        Large
+    };
+
 }

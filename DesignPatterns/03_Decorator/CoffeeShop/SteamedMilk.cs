@@ -6,12 +6,9 @@ using System.Threading.Tasks;
 
 namespace DesignPatterns._03_Decorator.CoffeeShop
 {
-    public class Mocha : CondimentDecorator
+    public class SteamedMilk : CondimentDecorator, IBeverage
     {
-        public override string Description
-        {
-            get { return DecoratedBeverage.Description + ", Mocha"; }
-        }
+        public override string Description => DecoratedBeverage.Description + ", Steamed Milk";
 
         private decimal _cost { get; set; }
         public override decimal Cost
@@ -21,15 +18,15 @@ namespace DesignPatterns._03_Decorator.CoffeeShop
                 _cost = DecoratedBeverage.Cost;
                 if (DecoratedBeverage.Size.Equals(BeverageSize.Large))
                 {
-                    _cost += 5.13m;
+                    _cost += 1.5m;
                 }
                 else if (DecoratedBeverage.Size.Equals(BeverageSize.Medium))
                 {
-                    _cost += 3.81m;
+                    _cost += 1.00m;
                 }
                 else if (DecoratedBeverage.Size.Equals(BeverageSize.Small))
                 {
-                    _cost += 1.85m;
+                    _cost += 0.5m;
                 }
 
                 return _cost;
@@ -38,9 +35,9 @@ namespace DesignPatterns._03_Decorator.CoffeeShop
             
         }
 
-        public Mocha(IBeverage beverage)
+        public SteamedMilk(IBeverage beverage)
         {
             DecoratedBeverage = beverage;
-        }     
+        }
     }
 }
