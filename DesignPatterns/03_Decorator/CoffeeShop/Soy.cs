@@ -16,15 +16,15 @@ namespace DesignPatterns._03_Decorator.CoffeeShop
             get
             {
                 _cost = DecoratedBeverage.Cost;
-                if (DecoratedBeverage.Size.Equals(BeverageSize.Large))
+                if (DecoratedBeverage.Size is (BeverageSize.Large))
                 {
                     _cost += 2.1m;
                 }
-                else if (DecoratedBeverage.Size.Equals(BeverageSize.Medium))
+                else if (DecoratedBeverage.Size is (BeverageSize.Medium))
                 {
                     _cost += 1.8m;
                 }
-                else if (DecoratedBeverage.Size.Equals(BeverageSize.Small))
+                else if (DecoratedBeverage.Size is (BeverageSize.Small))
                 {
                     _cost += 1.2m;
                 }

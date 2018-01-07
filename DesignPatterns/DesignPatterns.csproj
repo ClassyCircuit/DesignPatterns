@@ -77,6 +77,23 @@
     <Compile Include="03_Decorator\CoffeeShop\Soy.cs" />
     <Compile Include="03_Decorator\CoffeeShop\SteamedMilk.cs" />
     <Compile Include="03_Decorator\CoffeeShop\Whip.cs" />
+    <Compile Include="04_Factory\AbstractFactory\CaliforniaStyle\PizzaStore\CaliforniaStylePizzaStore.cs" />
+    <Compile Include="04_Factory\AbstractFactory\CaliforniaStyle\Products\CaliforniaStyleCheesePizza.cs" />
+    <Compile Include="04_Factory\AbstractFactory\CaliforniaStyle\Products\CaliforniaStyleGreekPizza.cs" />
+    <Compile Include="04_Factory\AbstractFactory\ChicagoStyle\PizzaStore\ChicagoStylePizzaStore.cs" />
+    <Compile Include="04_Factory\AbstractFactory\ChicagoStyle\Products\ChicagoStyleCheesePizza.cs" />
+    <Compile Include="04_Factory\AbstractFactory\ChicagoStyle\Products\ChicagoStyleGreekPizza.cs" />
+    <Compile Include="04_Factory\AbstractFactory\NYStyle\PizzaStore\NYStylePizzaStore.cs" />
+    <Compile Include="04_Factory\AbstractFactory\NYStyle\Products\NYStyleCheesePizza.cs" />
+    <Compile Include="04_Factory\AbstractFactory\NYStyle\Products\NYStyleGreekPizza.cs" />
+    <Compile Include="04_Factory\AbstractFactory\BaseProducts\Pizza.cs" />
+    <Compile Include="04_Factory\AbstractFactory\PizzaStore\PizzaStore.cs" />
+    <Compile Include="04_Factory\SimpleFactory\CheesePizza.cs" />
+    <Compile Include="04_Factory\SimpleFactory\GreekPizza.cs" />
+    <Compile Include="04_Factory\SimpleFactory\IPizza.cs" />
+    <Compile Include="04_Factory\SimpleFactory\PizzaStore.cs" />
+    <Compile Include="04_Factory\SimpleFactory\Pizza.cs" />
+    <Compile Include="04_Factory\SimpleFactory\SimplePizzaFactory.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -84,7 +101,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="04_Factory\" />
     <Folder Include="05_Singleton\" />
     <Folder Include="06_Command\" />
     <Folder Include="07_Adapter-Facade\" />
