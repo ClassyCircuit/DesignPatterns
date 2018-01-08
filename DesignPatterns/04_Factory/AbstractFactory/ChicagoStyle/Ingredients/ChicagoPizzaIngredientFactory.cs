@@ -19,7 +19,7 @@ namespace DesignPatterns._04_Factory.AbstractFactory.ChicagoStyle.Ingredients
             return new MushroomSauce();
         }
 
-        public Cheese CreateCheese()
+        public ICheese CreateCheese()
         {
             return new SoftCheese();
         }

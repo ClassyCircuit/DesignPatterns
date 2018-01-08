@@ -14,7 +14,7 @@ namespace DesignPatterns._04_Factory.AbstractFactory.BaseProducts
         protected Dough dough { get; set; }
         protected Sauce sauce { get; set; }
         protected Veggies[] veggies { get; set; }
-        protected Cheese cheese { get; set; }
+        protected ICheese cheese { get; set; }
         protected Pepperoni pepperoni { get; set; }
         protected Clams clams { get; set; }
 

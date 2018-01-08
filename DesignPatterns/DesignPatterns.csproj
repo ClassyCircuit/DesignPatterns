@@ -77,7 +77,7 @@
     <Compile Include="03_Decorator\CoffeeShop\Soy.cs" />
     <Compile Include="03_Decorator\CoffeeShop\SteamedMilk.cs" />
     <Compile Include="03_Decorator\CoffeeShop\Whip.cs" />
-    <Compile Include="04_Factory\AbstractFactory\BaseProducts\Cheese.cs" />
+    <Compile Include="04_Factory\AbstractFactory\BaseProducts\ICheese.cs" />
     <Compile Include="04_Factory\AbstractFactory\BaseProducts\Clams.cs" />
     <Compile Include="04_Factory\AbstractFactory\BaseProducts\Dough.cs" />
     <Compile Include="04_Factory\AbstractFactory\BaseProducts\IPizzaIngredientFactory.cs" />
@@ -114,6 +114,8 @@
     <Compile Include="04_Factory\SimpleFactory\PizzaStore.cs" />
     <Compile Include="04_Factory\SimpleFactory\Pizza.cs" />
     <Compile Include="04_Factory\SimpleFactory\SimplePizzaFactory.cs" />
+    <Compile Include="05_Singleton\EagerSingleton.cs" />
+    <Compile Include="05_Singleton\UnsafeSingleton.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -121,7 +123,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="05_Singleton\" />
     <Folder Include="06_Command\" />
     <Folder Include="07_Adapter-Facade\" />
     <Folder Include="08_TemplateMethod\" />
