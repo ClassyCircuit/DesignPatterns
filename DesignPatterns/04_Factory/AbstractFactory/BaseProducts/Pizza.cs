@@ -10,19 +10,16 @@ namespace DesignPatterns._04_Factory.AbstractFactory.BaseProducts
         public string Name { get; set; }
         public decimal Price { get; set; }
         public Enum Size { get; set; }
-        public string Sauce { get; set; }
-        public List<string> Toppings;
 
-        public virtual void Prepare()
-        {
-            Console.WriteLine($"Preparing {Name} pizza");
-            Console.WriteLine($"Adding {Sauce}");
-            Console.Write($"Adding toppings:");
-            foreach (var topping in Toppings)
-            {
-                Console.Write($" {topping}");
-            }
-        }
+        protected Dough dough { get; set; }
+        protected Sauce sauce { get; set; }
+        protected Veggies[] veggies { get; set; }
+        protected Cheese cheese { get; set; }
+        protected Pepperoni pepperoni { get; set; }
+        protected Clams clams { get; set; }
+
+
+        public abstract void Prepare();
 
         public virtual void Bake()
         {

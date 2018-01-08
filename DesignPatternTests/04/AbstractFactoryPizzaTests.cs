@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DesignPatterns._04_Factory.AbstractFactory.NYStyle.PizzaStore;
-using DesignPatterns._04_Factory.AbstractFactory.CaliforniaStyle.PizzaStore;
 using DesignPatterns._04_Factory.AbstractFactory.ChicagoStyle.PizzaStore;
 using DesignPatterns._04_Factory.SimpleFactory;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -33,15 +32,5 @@ namespace DesignPatternTests._04
             Assert.AreEqual("ChicagoStyle cheese", pizza.Name);
             Assert.AreEqual(Size.Large, pizza.Size);
         }
-
-        [TestMethod]
-        public void CreateCaliforniaStyleCheesePizza()
-        {
-            PizzaStore californiaStore = new CaliforniaStylePizzaStore();
-            Pizza pizza = californiaStore.OrderPizza("cheese", Size.Small);
-            Assert.AreEqual("CaliforniaStyle cheese", pizza.Name);
-            Assert.AreEqual(Size.Small, pizza.Size);
-        }
-
     }
 }

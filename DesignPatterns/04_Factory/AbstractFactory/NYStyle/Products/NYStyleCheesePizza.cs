@@ -6,16 +6,22 @@ namespace DesignPatterns._04_Factory.AbstractFactory.NYStyle.Products
 {
     public class NYStyleCheesePizza : Pizza
     {
-        public NYStyleCheesePizza(Enum size)
+        private IPizzaIngredientFactory _ingredientFactory;
+
+        public NYStyleCheesePizza(Enum size, IPizzaIngredientFactory ingredientFactory)
         {
+            this._ingredientFactory = ingredientFactory;
             this.Name = "NYStyle cheese";
             this.Price = 8.99m;
             this.Size = size;
-            this.Sauce = "Happy sauce";
-            this.Toppings = new List<string>()
-            {
-                "olives", "chili", "cherry tomatoes"
-            };
+        }
+
+        public override void Prepare()
+        {
+            Console.WriteLine($"Preparing {Name}");
+            this.dough = _ingredientFactory.CreateDough();
+            this.sauce = _ingredientFactory.CreateSauce();
+            this.cheese = _ingredientFactory.CreateCheese();
         }
  
     }

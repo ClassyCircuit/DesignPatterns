@@ -6,16 +6,20 @@ namespace DesignPatterns._04_Factory.AbstractFactory.ChicagoStyle.Products
 {
     class ChicagoStyleCheesePizza : Pizza
     {
-        public ChicagoStyleCheesePizza(Enum size)
+        private IPizzaIngredientFactory _ingredientFactory;
+        public ChicagoStyleCheesePizza(Enum size, IPizzaIngredientFactory ingredientFactory)
         {
             this.Name = "ChicagoStyle cheese";
             this.Price = 17.50m;
             this.Size = size;
-            this.Sauce = "Red cherry sauce";
-            this.Toppings = new List<string>()
-            {
-                "pickles", "cherry"
-            };
+            this._ingredientFactory = ingredientFactory;
+        }
+
+        public override void Prepare()
+        {
+            this.dough = _ingredientFactory.CreateDough();
+            this.sauce = _ingredientFactory.CreateSauce();
+            this.cheese = _ingredientFactory.CreateCheese();
         }
 
         public override void Bake()
