@@ -54,6 +54,8 @@
     <Compile Include="04\AbstractFactoryPizzaTests.cs" />
     <Compile Include="04\SimplePizzaStoreTests.cs" />
     <Compile Include="05\SingletonTests.cs" />
+    <Compile Include="06\HomeAutomationTests.cs" />
+    <Compile Include="06\MyVersionTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -116,6 +116,26 @@
     <Compile Include="04_Factory\SimpleFactory\SimplePizzaFactory.cs" />
     <Compile Include="05_Singleton\EagerSingleton.cs" />
     <Compile Include="05_Singleton\UnsafeSingleton.cs" />
+    <Compile Include="06_Command\HomeAutomation\Commands\GarageDoorCloseCommand.cs" />
+    <Compile Include="06_Command\HomeAutomation\Commands\GarageDoorOpenCommand.cs" />
+    <Compile Include="06_Command\HomeAutomation\Commands\ICommand.cs" />
+    <Compile Include="06_Command\HomeAutomation\Commands\LightOffCommand.cs" />
+    <Compile Include="06_Command\HomeAutomation\Commands\NoCommand.cs" />
+    <Compile Include="06_Command\HomeAutomation\Receivers\GarageDoor.cs" />
+    <Compile Include="06_Command\HomeAutomation\Receivers\Light.cs" />
+    <Compile Include="06_Command\HomeAutomation\Commands\LightOnCommand.cs" />
+    <Compile Include="06_Command\HomeAutomation\Remote.cs" />
+    <Compile Include="06_Command\MyVersion\HotTub.cs" />
+    <Compile Include="06_Command\MyVersion\HotTubController.cs" />
+    <Compile Include="06_Command\MyVersion\IController.cs" />
+    <Compile Include="06_Command\MyVersion\Light.cs" />
+    <Compile Include="06_Command\MyVersion\LightController.cs" />
+    <Compile Include="06_Command\MyVersion\Remote.cs" />
+    <Compile Include="06_Command\MyVersion\RemoteController.cs" />
+    <Compile Include="06_Command\MyVersion\Stereo.cs" />
+    <Compile Include="06_Command\MyVersion\StereoController.cs" />
+    <Compile Include="06_Command\MyVersion\TV.cs" />
+    <Compile Include="06_Command\MyVersion\TVController.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -123,7 +143,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="06_Command\" />
     <Folder Include="07_Adapter-Facade\" />
     <Folder Include="08_TemplateMethod\" />
     <Folder Include="09_Iterator-Composite\" />
