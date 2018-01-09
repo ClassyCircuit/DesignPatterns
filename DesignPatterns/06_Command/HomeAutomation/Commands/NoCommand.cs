@@ -10,5 +10,7 @@ namespace DesignPatterns._06_Command.HomeAutomation.Commands
     {
         // Empty command that does nothing
         public void Execute () { }
+
+        public void Undo() { }
     }
 }

@@ -9,5 +9,6 @@ namespace DesignPatterns._06_Command.HomeAutomation.Commands
    public interface ICommand
     {
         void Execute();
+        void Undo();
     }
 }

@@ -53,5 +53,20 @@ namespace DesignPatternTests._06
             remote.PressOffButton(0);
             remote.PressOffButton(1);
         }
+
+        [TestMethod]
+        public void UndoTurningLightsOn()
+        {
+            remote.PressOnButton(0);
+            remote.PressUndoButton();
+        }
+
+        [TestMethod]
+        public void PressUndoButtonRightAway()
+        {
+            remote.PressUndoButton();
+        }
     }
+
+
 }

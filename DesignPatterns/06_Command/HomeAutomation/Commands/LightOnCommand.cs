@@ -19,5 +19,10 @@ namespace DesignPatterns._06_Command.HomeAutomation.Commands
         {
             _light.On();
         }
+
+        public void Undo()
+        {
+            _light.Off();
+        }
     }
 }

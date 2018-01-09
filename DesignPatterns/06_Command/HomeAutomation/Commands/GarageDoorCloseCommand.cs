@@ -18,5 +18,10 @@ namespace DesignPatterns._06_Command.HomeAutomation.Commands
         {
             _door.Down();
         }
+
+        public void Undo()
+        {
+            _door.Up();
+        }
     }
 }

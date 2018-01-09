@@ -19,5 +19,10 @@ namespace DesignPatterns._06_Command.HomeAutomation.Commands
         {
             _garageDoor.Up();
         }
+
+        public void Undo()
+        {
+            _garageDoor.Down();
+        }
     }
 }
